@@ -9,8 +9,9 @@ const Header = () => {
     { name: "Home", href: "/" },
     { name: "Research", href: "/research" },
     { name: "Data Platform", href: "/platform" },
-    { name: "About", href: "/#about" },
-    { name: "Contact", href: "/#contact" },
+    { name: "AI Assistant", href: "/ai-assistant" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -38,7 +39,11 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <Button variant="default" className="bg-gradient-ocean hover:shadow-ocean transition-all duration-300">
+            <Button 
+              variant="default" 
+              className="bg-gradient-ocean hover:shadow-ocean transition-all duration-300"
+              onClick={() => window.location.href = '/portal-access'}
+            >
               Portal Access
             </Button>
           </nav>
@@ -66,7 +71,11 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button variant="default" className="bg-gradient-ocean mt-4 w-fit">
+              <Button 
+                variant="default" 
+                className="bg-gradient-ocean mt-4 w-fit"
+                onClick={() => window.location.href = '/portal-access'}
+              >
                 Portal Access
               </Button>
             </div>
